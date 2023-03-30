@@ -1,6 +1,6 @@
 package Home_Work_2._3;
 
-public class Human extends Mammal implements Say{
+public class Human extends Mammal implements Say, Food{
 
     public Human(String name, int age){
         super(name, age);

@@ -7,6 +7,30 @@ public class Cat extends Animal implements Say{
 
     @Override
     public void voice() {
-        System.out.println("Мяу");
+        if this.getFull0ffood() == 100 {
+            System.out.println("Мурррр!");
+        }
+        else{
+            System.out.println("Мяуууу!");
+            int diff = this.getFull0ffood() - 30;
+            if diff < 0 {
+                this.setFull0ffood(0);
+            }
+            else{
+                this.setFull0ffood(diff);
+            }
+        }
+
     }
+
+    static void getfood(int food){
+        int sum = this.getFull0ffood() + food;
+        if sum > 99 {
+            this.setFull0ffood(100);
+                   }
+        else this.setFull0ffood(sum);
+        }
+
+
+
 }
